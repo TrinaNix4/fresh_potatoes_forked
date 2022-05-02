@@ -88,7 +88,7 @@ const renderPostReviews = () => {
       </div>
 
       <div className="bubble bubble-bottom-left">
-        <h5>{review.comment}:</h5>
+        <h5>{review.comment}</h5>
       </div>
     </div>
   ));
@@ -96,12 +96,19 @@ const renderPostReviews = () => {
 
   return (
     <div className="movie-review2 ">
-      <h3 className="Popular-MD" >
-       
-        {preReviews.length == 0 ? <p>no reviews</p> : renderPreReviews()}
+      <h3 className="Popular-MD">
+        {preReviews.length == 0 ? (
+          <p>Be the first to review this movie!</p>
+        ) : (
+          renderPreReviews()
+        )}
       </h3>
-      <h3 className="Popular-MD "> 
-      {postReviews.length == 0 ? <p>no reviews</p> : renderPostReviews()}
+      <h3 className="Popular-MD ">
+        {postReviews.length == 0 ? (
+          <p>Be the first to review this movie!</p>
+        ) : (
+          renderPostReviews()
+        )}
       </h3>
     </div>
   );
