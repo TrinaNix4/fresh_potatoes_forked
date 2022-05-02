@@ -59,7 +59,7 @@ const renderPreReviews = () => {
         </h4>
       </div>
       <div className="bubble bubble-bottom-left">
-        <h5>{review.comment} </h5>
+        <h5>{review.comment}</h5>
       </div>
     </div>
   ));
