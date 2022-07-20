@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import "../CssFIles/card.css";
+import "../CssFiles/card.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
@@ -27,7 +27,7 @@ const Genres = () => {
               flexWrap: "wrap",
               justifyContent: "space-evenly",
               width: "100%",
-              height:"100%",
+              height: "100%",
             }}
           >
             <Link to={`/genres/28`}>
