@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../CssFIles/carousel.css";
+import "../CssFiles/carousel.css";
 
 const Carousel = (props) => {
   //add a prop, this is the content that will be displayed on the carousel
@@ -8,12 +8,10 @@ const Carousel = (props) => {
   //to the carousel (length)
   const [currentIndex, setCurrentIndex] = useState(infiniteLoop ? show : 0);
   const [length, setLength] = useState(children.length);
-
   const [isRepeating, setIsRepeating] = useState(
     infiniteLoop && children.length > show
   );
   const [transitionEnabled, setTransitionEnabled] = useState(true);
-
   const [touchPosition, setTouchPosition] = useState(null);
 
   // Set the length to match current children from props
