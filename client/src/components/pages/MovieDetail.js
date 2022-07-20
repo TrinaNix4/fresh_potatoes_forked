@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import YouTube from "react-youtube";
 import "../../App.css";
-import "../CssFIles/container.css";
+import "../CssFiles/container.css";
 import { useParams } from "react-router-dom";
 import Ratings from "../shared/Ratings";
 import Review from "./Review";
@@ -11,8 +11,8 @@ import defaultPotatoe from "../../Images/blackwhitePotatoe.png";
 import "../CssFIles/MovieDetail.css";
 import TheatersIcon from "@mui/icons-material/Theaters";
 import TheaterComedyIcon from "@mui/icons-material/TheaterComedy";
-import ThumbsUpDownIcon from '@mui/icons-material/ThumbsUpDown';
-import ReviewsIcon from '@mui/icons-material/Reviews';
+import ThumbsUpDownIcon from "@mui/icons-material/ThumbsUpDown";
+import ReviewsIcon from "@mui/icons-material/Reviews";
 import fry from "../../Images/fryLogo.png";
 import potatoe from "../../Images/Potatoe.png";
 import Loader from "../Loader/loader";
@@ -170,7 +170,7 @@ const MovieDetail = () => {
   };
 
   if (!movie) {
-    return <Loader/>;
+    return <Loader />;
   }
 
   const render = () => {
@@ -282,7 +282,7 @@ const MovieDetail = () => {
             <div className="movie-overview3">
               <div className="Big-Line">
                 <h1 className="Movie-Info-Review">All Reviews</h1>
-                
+
                 <div className="Theater-Icon">
                   <ReviewsIcon sx={{ fontSize: 40 }} />
                 </div>
