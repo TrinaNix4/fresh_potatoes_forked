@@ -21,7 +21,7 @@ import { Link } from "react-router-dom";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import "../CssFIles/About.css";
+import "../CssFiles/About.css";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -30,12 +30,8 @@ import TheatersIcon from "@mui/icons-material/Theaters";
 import camera from "../CssFIles/images/camera.png";
 import clapper from "../CssFIles/images/clapper.png";
 import emailIcon from "../CssFIles/email.svg";
-import YouTubeIcon from '@mui/icons-material/YouTube';
+import YouTubeIcon from "@mui/icons-material/YouTube";
 import YouTube from "@mui/icons-material/YouTube";
-
-
-
-
 
 export default function MediaCard() {
   return (
@@ -79,18 +75,15 @@ export default function MediaCard() {
       <CardActions></CardActions> */}
 
       {/* *****TESTING TEAM CARD - IDK HOW TO CHANGE THE BG****** */}
-      
-     
-        <h1>
-          {" "}
-           <img src={clapper} width="3.5%" /> 
-          The Fresh Potatoes Team
-           <img src={camera} width="3.5%" /> 
-          {/* <TheatersIcon sx={{ fontSize: 30 }} /> */}
-         
-          {/* <img src={clapper}width="3.5%"/> */}
-        </h1>
-      
+
+      <h1>
+        {" "}
+        <img src={clapper} width="3.5%" />
+        The Fresh Potatoes Team
+        <img src={camera} width="3.5%" />
+        {/* <TheatersIcon sx={{ fontSize: 30 }} /> */}
+        {/* <img src={clapper}width="3.5%"/> */}
+      </h1>
 
       {/* ------------------      team  -----------------*/}
       <div className="the-team">
@@ -112,7 +105,7 @@ export default function MediaCard() {
                     />
                   </a>
                 </li>
-                
+
                 <li>
                   <a href="https://www.youtube.com/watch?v=O8HqIBAohis">
                     <YouTubeIcon
