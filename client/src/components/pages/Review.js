@@ -4,7 +4,7 @@ import axios from "axios";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
-import "../CssFIles/editProfile.css";
+import "../CssFiles/editProfile.css";
 import SvgComponent from "./SvgPotato";
 import Radio from "@mui/material/Radio";
 import {
@@ -12,7 +12,7 @@ import {
   FormControlLabel,
   FormLabel,
   RadioGroup,
-  Button
+  Button,
 } from "@mui/material";
 import SvgPotato from "./SvgPotato";
 import SvgFries from "./SvgFries";
@@ -26,7 +26,7 @@ const labels = {
   4: "Awesome!",
   5: "Absolute must-see!",
 };
-let timeout; 
+let timeout;
 const Review = (props) => {
   const [allReviews, setAllReviews] = useState([]);
   const [review, setReview] = useState("");
@@ -66,18 +66,18 @@ const Review = (props) => {
       alert("error occurred posting review");
     }
   };
-  
+
   function getLabelText(value) {
     return `${value} Star${value !== 1 ? "s" : ""}, ${labels[value]}`;
   }
 
-    useEffect(() => {
-      return () => {
-        if (timeout) {
-          clearTimeout(timeout);
-        }
-      };
-    }, []);
+  useEffect(() => {
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    };
+  }, []);
 
   return (
     <div style={{ backgroundColor: "white" }}>
@@ -88,8 +88,12 @@ const Review = (props) => {
       </h4> */}
       <h3>Give it a rating, and then submit a review below!</h3>
 
-      <p><Link to="/freshmeter"><b style={{ color: "#ec4e20" }}>How do ratings work?</b></Link></p><br/>
-
+      <p>
+        <Link to="/freshmeter">
+          <b style={{ color: "#ec4e20" }}>How do ratings work?</b>
+        </Link>
+      </p>
+      <br />
 
       <div className="reviewRating">
         <Rating
@@ -159,13 +163,9 @@ const Review = (props) => {
       <form onSubmit={handleSubmit}>
         <div>
           <textarea
-
-         
-
             placeholder={
               "Your review helps others find great movies to watch. Please share what you liked or disliked."
             }
-
             style={{ marginTop: "2.5em", opacity: 0.55 }}
             onChange={(e) => setReview(e.target.value)}
             cols="55"
@@ -191,7 +191,6 @@ const Review = (props) => {
           >
             {loading ? "Loading..." : "Submit Review"}
           </Button>
-
         </div>
         {/* <button className="editprofilebtn">Submit Review</button> */}
       </form>
