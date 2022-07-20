@@ -1,14 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams } from "react-router-dom";
-import "../CssFIles/container.css";
+import "../CssFiles/container.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import Loader from "../Loader/loader";
 
 const GenreShow = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   const [genre, setGenre] = useState([]);
   const [movies, setMovies] = useState([]);
   const location = useLocation();
@@ -25,7 +25,7 @@ const GenreShow = () => {
     try {
       let res = await axios.get(`/api/genres/${params.id}`);
       setMovies(res.data.results);
-      setLoading(false)
+      setLoading(false);
       console.log("MOVIES:", res.data.results);
     } catch (err) {
       alert("Error in getting movies");
@@ -64,16 +64,14 @@ const GenreShow = () => {
     }
   };
   const params = useParams();
-  
-  if(!movies) {
+
+  if (!movies) {
     return <Loader />;
   }
   const render = () => {
-    if(loading) {
+    if (loading) {
       return <Loader />;
     }
-  
-
 
     return (
       <div className="App1">
@@ -101,7 +99,7 @@ const GenreShow = () => {
       </div>
     );
   };
-  return <div>{render()}</div>
+  return <div>{render()}</div>;
 };
 
 export default GenreShow;
