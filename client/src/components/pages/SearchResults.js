@@ -4,11 +4,11 @@ import axios from "axios";
 import Fuse from "fuse.js";
 import Ratings from "../shared/Ratings";
 import { Link } from "react-router-dom";
-import "../CssFIles/card.css";
-import "../CssFIles/SearchBar.css";
-import "../CssFIles/searchResults.css";
+import "../CssFiles/card.css";
+import "../CssFiles/SearchBar.css";
+import "../CssFiles/searchResults.css";
 import SearchIcon from "@mui/icons-material/Search";
-import "../CssFIles/Popular.css";
+import "../CssFiles/Popular.css";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import potatoe from "../../Images/Potatoe.png";
@@ -93,13 +93,6 @@ const SearchResults = () => {
       alert("Error in getting watched reviews");
     }
   };
-  
-  
-  
-  
-  
-  
-  
 
   return (
     <div className="App1">
