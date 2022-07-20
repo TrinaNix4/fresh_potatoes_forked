@@ -1,17 +1,12 @@
 import React,{useContext,useEffect,useState} from "react";
 import '../CssFIles/editProfile.css'
 import {useTranslation} from 'react-i18next'
-import Button from "@mui/material/Button";
 // Import React FilePond
 import { FilePond, registerPlugin } from "react-filepond";
 import { AuthContext } from "../../providers/AuthProvider";
 import FlashMessage, { MuiSnackbar } from "../pages/FlashMessage";
 // Import FilePond styles
 import "filepond/dist/filepond.min.css";
- import Snackbar from "@mui/material/Snackbar";
-import Alert from "@mui/material/Alert"; 
-
-
 // Import the Image EXIF Orientation and Image Preview plugins
 // Note: These need to be installed separately
 // `npm i filepond-plugin-image-preview filepond-plugin-image-exif-orientation --save`
@@ -44,38 +39,38 @@ function EditProfile() {
   // const [success, setSuccess] = useState(false);
   // const [message, setMessage] = useState('');
                                                                                                              
-  const onChange = (event) => {
-    let valid;
+  // const onChange = (event) => {
+  //   let valid;
 
-    switch (event.target.id) {
-      case "email":
-        setEmail(event.target.value);
-        valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
-          event.target.value
-        );
+  //   switch (event.target.id) {
+  //     case "email":
+  //       setEmail(event.target.value);
+  //       valid = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+  //         event.target.value
+  //       );
 
-        if (!valid) {
-          setEmailHelper("Invalid email");
-        } else {
-          setEmailHelper("");
-        }
-        break;
-      case "phone":
-        setPhone(event.target.value);
-        valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
-          event.target.value
-        );
+        // if (!valid) {
+        //   setEmailHelper("Invalid email");
+        // } else {
+        //   setEmailHelper("");
+        // }
+        // break;
+      // case "phone":
+      //   setPhone(event.target.value);
+      //   valid = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(
+      //     event.target.value
+      //   );
 
-        if (!valid) {
-          setPhoneHelper("Invalid Phone");
-        } else {
-          setPhoneHelper("");
-        }
-        break;
-      default:
-        break;
-    }
-  };
+  //       if (!valid) {
+  //         setPhoneHelper("Invalid Phone");
+  //       } else {
+  //         setPhoneHelper("");
+  //       }
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // };
   const upload = () =>{
     if(showUpload){
       return ////// ??????  how to return whole form upload box
@@ -218,17 +213,10 @@ function EditProfile() {
 
             <br />
             <br />
-            {/* <MuiSnackbar /> */}
             <div
-              // style={{
-              //   display: "flex",
-              //   paddingTop: "10px",
-              //   marginLeft: "375px",
-              // }}
             >
-
-              <button className="editprofilebtn"
-                // className="buttonlogin1 btnlogin"
+              <button
+                className="editprofilebtn"
                 variant="contained"
                 type="button"
                 onClick={handleSubmit}
@@ -237,18 +225,8 @@ function EditProfile() {
                 {loading ? "Loading..." : "Update Profile"}
               </button>
             </div>
-
-            {/* {
-          success ? <FlashMessage message={message}/> : ''
-      } */}
-
-            {/* BRENDA: here is the section I couldn't get the loading state from above to work */}
-            {/* <button className="editprofilebtn" type="submit">
-              {t("common:submit")}
-            </button> */}
             <br />
           </div>
-          {/* <button  type = 'button' onClick={()=>setShowUpload(!showUpload)}>Click to update profile image</button> */}
         </form>
       </div>
     </div>
