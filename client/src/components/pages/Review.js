@@ -4,7 +4,7 @@ import axios from "axios";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
-import "../CssFiles/editProfile.css";
+import "../CssFIles/editProfile.css";
 import SvgComponent from "./SvgPotato";
 import Radio from "@mui/material/Radio";
 import {

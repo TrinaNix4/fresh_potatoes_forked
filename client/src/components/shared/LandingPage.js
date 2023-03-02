@@ -1,7 +1,6 @@
 import React from "react";
 import backpic from "../../Images/landingPage.jpg";
 import logo from "../../Images/Theotherlogo-01.png";
-import backpic2 from "../../Images/NeonBackground.jpg";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Button from "@mui/material/Button";
 import { Link } from "@mui/material";
@@ -69,14 +68,12 @@ const LandingPage = () => {
         <img className="logolanding" src={logo}></img>
       </div>
 
-      <p className="text-landing">
-        Exclusive reviews by movie lovers.
-      </p>
+      <p className="text-landing">Exclusive reviews by movie lovers.</p>
 
       <div className="btn-all">
         <Link className="landingbtn1" href="/register">
           {" "}
-         Get Started
+          Get Started
         </Link>
 
         <div className="check-align">

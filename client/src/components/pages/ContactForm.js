@@ -6,7 +6,7 @@ import { Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 
-import background from "../CssFIles/background.jpg";
+//import background from "../CssFIles/background.jpg";
 import phoneIcon from "../CssFIles/phone.svg";
 import emailIcon from "../CssFIles/email.svg";
 import airplane from "../CssFIles/send.svg";
@@ -15,7 +15,7 @@ import i18next from "i18next";
 
 const useStyles = makeStyles((theme) => ({
   background: {
-    backgroundImage: `url(${background})`,
+    //backgroundImage: `url(${background})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",

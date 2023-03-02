@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Carousel from "../pages/Carousel";
 import { AuthContext } from "../../providers/AuthProvider";
 import GenreFilter from "../pages/GenreFilter";
-import "../CssFiles/card.css";
+import "../CssFIles/card.css";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {

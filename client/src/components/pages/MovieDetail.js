@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import YouTube from "react-youtube";
 import "../../App.css";
-import "../CssFiles/container.css";
+import "../CssFIles/container.css";
 import { useParams } from "react-router-dom";
 import Ratings from "../shared/Ratings";
 import Review from "./Review";

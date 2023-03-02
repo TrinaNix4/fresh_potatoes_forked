@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, Outlet } from "react-router-dom";
-import "../CssFiles/Popular.css";
+import "../CssFIles/Popular.css";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 import frylogo from "../../Images/fryLogo.png";
