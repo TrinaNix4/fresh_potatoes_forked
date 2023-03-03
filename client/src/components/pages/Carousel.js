@@ -72,7 +72,7 @@ const Carousel = (props) => {
   return (
     <div className="carousel-container">
       <div className="carousel-wrapper">
-        {/* You can alwas change the content of the button to other things */}
+        {/* You can always change the content of the button to other things */}
         {(isRepeating || currentIndex > 0) && (
           //buttons added for user to interact with; previous and next buttons
           <button onClick={prev} className="left-arrow">
