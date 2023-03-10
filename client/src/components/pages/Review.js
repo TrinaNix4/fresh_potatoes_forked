@@ -3,9 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
-import StarIcon from "@mui/icons-material/Star";
 import "../CssFIles/editProfile.css";
-import SvgComponent from "./SvgPotato";
 import Radio from "@mui/material/Radio";
 import {
   FormControl,
