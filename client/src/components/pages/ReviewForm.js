@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { DataContext } from "../providers/DataProvider";
-// props from componenet for teh reviewID; check the review ID (if we use modal)
+// props from component for the reviewID; check the review ID (if we use modal)
 const ReviewForm = (props) => {
   const { addReview } = useContext(DataContext);
   const navigate = useNavigate();
@@ -42,8 +42,8 @@ const ReviewForm = (props) => {
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
         <button className="button">{params.id ? "Update" : "Create"}</button>
       </form>
-      <p>id: {params.id ? params.id : "no id"}</p>
-      <p>{JSON.stringify(location.state)}</p>
+      {/* <p>id: {params.id ? params.id : "no id"}</p>
+      <p>{JSON.stringify(location.state)}</p> */}
     </div>
   );
 };
