@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import { DataContext } from "../providers/DataProvider";
+
 // props from component for the reviewID; check the review ID (if we use modal)
 const ReviewForm = (props) => {
   const { addReview } = useContext(DataContext);
@@ -27,7 +28,6 @@ const ReviewForm = (props) => {
         console.log("res.data:", res.data);
         addReview(res.data);
       }
-      // TODO: where should we route to?
       navigate("/reviews");
     } catch (err) {
       // alerts if there is an error
