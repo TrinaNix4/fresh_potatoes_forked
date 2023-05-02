@@ -42,8 +42,6 @@ const ReviewForm = (props) => {
         <input value={title} onChange={(e) => setTitle(e.target.value)} />
         <button className="button">{params.id ? "Update" : "Create"}</button>
       </form>
-      {/* <p>id: {params.id ? params.id : "no id"}</p>
-      <p>{JSON.stringify(location.state)}</p> */}
     </div>
   );
 };
